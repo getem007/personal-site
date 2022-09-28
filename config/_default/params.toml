@@ -1,0 +1,45 @@
+# Edit these
+# -----------------------------------------------------------------------
+profilePicture = "images/your_image_file_name.jpg"
+title = "Name beneath your photo, plus title?"
+description = ""
+author = "Your Name"
+
+[[socialIcons]]
+icon = "fab fa-twitter"
+title = "Twitter"
+url = "https://www.twitter.com/twitter_handle"
+
+[[socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/linkedin_handle"
+
+[[socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:myemail@wherever.com"
+
+
+# Ignore these
+# ------------------------------------------------------------------------
+keywords = ""
+favicon = "favicons/"
+enableMediumZoom = false
+
+doNotLoadAnimations = false
+
+singleDateFormat = "2/1/2006"
+indexDateFormat = "2/1/2006"
+listDateFormat = "2/1/2006"
+
+# Read More links for truncated summaries
+# readMore = true
+# postSectionName = "blog"
+
+## Math settings
+[math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html  dir="{{ .Site.Language.LanguageDirection | default "ltr" }}" lang="{{- site.Language.Lang -}}" data-theme="{{- .Site.Params.displayMode -}}">
+{{- partial "head.html" . -}}
+<body>
+
+{{- partial "sidebar.html" . -}}
+<div class="main">
+    {{ partial "navbar.html" . }}
+    <div class="autopagerize_page_element">
+        <div class="content {{ with .Page.Params.doc }} doc {{ else }} {{ end }}">
+            {{- block "main" . }}{{- end }}
+        </div>
+    </div>
+</div>
+
+{{- partial "footer.html" . -}}
+{{- if (eq .Site.Params.simpleAnalytics.enable true) -}}
+    {{- partial "analytics/simpleanalytics.html" . -}}
+{{- end -}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"
+    integrity="sha512-t2JWqzirxOmR9MZKu+BMz0TNHe55G5BZ/tfTmXMlxpUY8tsTo3QMD27QGoYKZKFAraIPDhFv56HLdN11ctmiTQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const docUrl = "{{ .Site.BaseURL }}/docs/{{ .Page.Params.doc }}";
+</script>
+
+{{- $secureJS := resources.Get "js/cv.js" | resources.Fingerprint -}}
+<script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

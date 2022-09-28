@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+    <div class="post {{ with .Site.Params.doNotLoadAnimations }} . {{ else }} animated fadeInDown {{ end }}">
+        {{ .Content }}
+    </div>
+
+    <div class="pagination">
+        {{ template "_internal/pagination.html" . }}
+    </div>
+{{ end }}

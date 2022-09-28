@@ -1,0 +1,22 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "Status of latest changes:",
+  "main": "index.js",
+  "scripts": {
+    "local": "hugo server -D"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elizabethteas/personal-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elizabethteas/personal-site/issues"
+  },
+  "homepage": "https://github.com/elizabethteas/personal-site#readme",
+  "devDependencies": {
+    "hugo-bin": "^0.80.0"
+  }
+}

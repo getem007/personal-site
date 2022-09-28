@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<div id="canvas-holder" style="display: none;">
+    <div id="button-holder">
+        <button id="prev">&lt;</button>
+        <span><span id="page_num"></span>&nbsp;/&nbsp;<span id="page_count"></span></span>
+        <button id="next">&gt;</button>
+    </div>
+    <a class="pdf-download" target="_blank" href="{{ .Site.BaseURL }}/docs/{{ .Page.Params.doc }}"></a>
+
+    <canvas id="doc-canvas" class="pdf-canvas"></canvas>
+</div>
+
+<embed id="embed-pdf" style="display: none;" class="fill-doc" src="{{ .Site.BaseURL }}/docs/{{ .Page.Params.doc }}"
+    type="application/pdf">
+
+{{ end }}
